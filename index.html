@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Game Hub</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>My Game Hub</h1>
+
+<input
+type="text"
+id="search"
+placeholder="Search games..."
+>
+
+<div id="games">
+
+  <div
+  class="game-card"
+  data-name="Moto X3M"
+  >
+
+    <img
+    src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/5d73577b18119fcd0b6eb07a7d9f84bc.png"
+    >
+
+    <h2>Moto X3M</h2>
+
+    <button onclick="openGame(
+'https://pokicomm.github.io/play/moto-x3m.html',
+'Moto X3M'
+)">
+      Open
+    </button>
+
+  </div>
+
+</div>
+
+<div id="popup" class="hidden">
+
+  <div class="menu">
+
+    <span
+    id="close"
+    onclick="closeGame()"
+    >
+      X
+    </span>
+
+    <h2 id="gameTitle"></h2>
+
+    <div class="buttons">
+
+      <button onclick="playGame()">
+        Play
+      </button>
+
+      <button onclick="fullscreenGame()">
+        Fullscreen
+      </button>
+
+    </div>
+
+    <div class="ad">
+      Your Ads Here
+    </div>
+
+    <iframe id="gameFrame"></iframe>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
